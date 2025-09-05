@@ -29,5 +29,6 @@ system.out.println("segundo parcial evidencia de conocimiento 40%, evidencia de 
 system.out.println("tercer parcial evidencia de conocimiento 20%, evidencia de desempeño 10%, evidencia de producto 40%, proyecto integrador 30%");
 }
 
-public static void
+public static void ma
+
 
