@@ -52,20 +52,7 @@ case 2:
 inicio.lineaminetosclassroom();
 break;
 case 3:
-inicio.Fechasdeparciales();
-break;
-case 4:
-inicio.Porcentajesporparcial();
-break
-case 5:
-system.out.println("salir");
-break;
-default:
-system.out.println("opcion no valida.\n");
-}
-}while(opcion!=5);
-scanner.close();
-
+inicio.Fechasde
  
 
 
