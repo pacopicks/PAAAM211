@@ -29,6 +29,30 @@ system.out.println("segundo parcial evidencia de conocimiento 40%, evidencia de 
 system.out.println("tercer parcial evidencia de conocimiento 20%, evidencia de desempeño 10%, evidencia de producto 40%, proyecto integrador 30%");
 }
 
-public static void ma
+public static void main (String [] args ){
+InicioPAM inicio = new inicioPAM();
+Scanner scanner = new Scanner(System.in)
+int option =0;
+do{
+system.out.println("menu");
+system.out.println("1 reglamento poo");
+system.out.println("2 lineamientos classroom");
+system.out.println("3 fechas parciales");
+system.out.println("4 porcentajes parcial");
+system.out.println("5 salir");
+system.out.println("elige la opcion ");
+
+opcion=scaner.nextInt();
+
+switch(opcion){
+case 1:
+inicio.reglamentopoo();
+break;
+case 2:
+inicio.lineaminetosclassroom();
+break;
+case 3:
+inicio.Fechasde
+ 
 
 
