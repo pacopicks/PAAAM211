@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import BotonesScreen from './botonesScreen';
 import ContadorScreen from './ContadorScreen';
-import Textinputalert from './text_input_alert';
+import TextScreen from './TextSreen';
 import ImageBackgroundSplashScreen from './ImageBackgroundSplashScreen';
 import ScrollView from './Scroll_View';
 import FlatListSection from './FlatList_Section';
@@ -18,8 +18,8 @@ export default function MenuScreen() {
       return <ContadorScreen />;
     case 'botones':
       return <BotonesScreen />;
-    case 'text_input_alert':
-      return <Textinputalert />;
+    case 'TextScreen':
+      return <TextScreen />;
     case 'image_background_splash':
       return <ImageBackgroundSplashScreen />;
     case 'scroll_view':
@@ -47,8 +47,8 @@ export default function MenuScreen() {
           />
 
           <Button
-            title="Pract: Text Input Alert"
-            onPress={() => setScreen('text_input_alert')}
+            title="Pract: TextScreen"
+            onPress={() => setScreen('TextScreen')}
           />
 
           <Button
