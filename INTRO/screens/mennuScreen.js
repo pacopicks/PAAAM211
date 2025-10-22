@@ -20,7 +20,7 @@ export default function MenuScreen() {
       return <BotonesScreen />;
     case 'TextScreen':
       return <TextScreen />;
-    case 'image_background_splash':
+    case 'ImageBackgroundSplashScreen':
       return <ImageBackgroundSplashScreen />;
     case 'scroll_view':
       return <ScrollView />;
@@ -52,8 +52,8 @@ export default function MenuScreen() {
           />
 
           <Button
-            title="Pract: Image Background Splash"
-            onPress={() => setScreen('image_background_splash')}
+            title="Pract: ImageBackgroundSplashScreen"
+            onPress={() => setScreen('ImageBackgroundSplashScreen')}
           />
 
           <Button
