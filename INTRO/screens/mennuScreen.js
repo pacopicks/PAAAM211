@@ -5,7 +5,7 @@ import BotonesScreen from './botonesScreen';
 import ContadorScreen from './ContadorScreen';
 import TextScreen from './TextSreen';
 import ImageBackgroundSplashScreen from './ImageBackgroundSplashScreen';
-import ScrollView from './Scroll_View';
+import ScrollView from './ScrollView';
 import FlatListSection from './FlatList_Section';
 import Modal from './modal';
 import ActivityIndicator from './Activity_indicator';
@@ -23,7 +23,7 @@ export default function MenuScreen() {
       return <TextScreen />;
     case 'ImageBackgroundSplashScreen':
       return <ImageBackgroundSplashScreen />;
-    case 'scroll_view':
+    case 'ScrollView':
       return <ScrollView />;
     case 'activity_indicator':
       return <ActivityIndicator />;
@@ -61,7 +61,7 @@ export default function MenuScreen() {
 
           <Button
             title="Pract: ScrollView"
-            onPress={() => setScreen('scroll_view')}
+            onPress={() => setScreen('ScrollView')}
           />
 
           <Button
