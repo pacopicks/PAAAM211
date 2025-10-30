@@ -6,9 +6,9 @@ import ContadorScreen from './ContadorScreen';
 import TextScreen from './TextSreen';
 import ImageBackgroundSplashScreen from './ImageBackgroundSplashScreen';
 import ScrollView from './ScrollView';
-import FlatListSection from './FlatList_Section';
+import FlatListSection from './FlatListSection';
 import Modal from './modal';
-import ActivityIndicator from './Activity_indicator';
+import ActivityScreen from './ActivityScreen';
 import RepasoScreen from './repasoScreen';
 
 export default function MenuScreen() {
@@ -19,70 +19,34 @@ export default function MenuScreen() {
       return <ContadorScreen />;
     case 'botones':
       return <BotonesScreen />;
-    case 'TextScreen':
+    case 'textScreen':
       return <TextScreen />;
-    case 'ImageBackgroundSplashScreen':
+    case 'imageBackground':
       return <ImageBackgroundSplashScreen />;
-    case 'ScrollView':
+    case 'scrollView':
       return <ScrollView />;
-    case 'activity_indicator':
-      return <ActivityIndicator />;
-    case 'flatlist_section':
+    case 'activity':
+      return <ActivityScreen />;
+    case 'flatlist':
       return <FlatListSection />;
     case 'modal':
       return <Modal />;
     case 'repaso':
       return <RepasoScreen />;
     default:
-      
       return (
         <View style={styles.container}>
           <Text style={styles.text}>Menu de Practicas</Text>
 
-          <Button
-            title="Pract: Contador"
-            onPress={() => setScreen('contador')}
-          />
-
-          <Button
-            title="Pract: Botones"
-            onPress={() => setScreen('botones')}
-          />
-
-          <Button
-            title="Pract: TextScreen"
-            onPress={() => setScreen('TextScreen')}
-          />
-
-          <Button
-            title="Pract: ImageBackgroundSplashScreen"
-            onPress={() => setScreen('ImageBackgroundSplashScreen')}
-          />
-
-          <Button
-            title="Pract: ScrollView"
-            onPress={() => setScreen('ScrollView')}
-          />
-
-          <Button
-            title="Pract: Activity Indicator"
-            onPress={() => setScreen('activity_indicator')}
-          />
-
-          <Button
-            title="Pract: FlatList Section"
-            onPress={() => setScreen('flatlist_section')}
-          />
-
-          <Button
-            title="Pract: Modal"
-            onPress={() => setScreen('modal')}
-          />
-
-          <Button
-            title="Pract: Repaso"
-            onPress={() => setScreen('repaso')}
-          />
+          <Button title="Pract: Contador" onPress={() => setScreen('contador')} />
+          <Button title="Pract: Botones" onPress={() => setScreen('botones')} />
+          <Button title="Pract: TextScreen" onPress={() => setScreen('textScreen')} />
+          <Button title="Pract: ImageBackground" onPress={() => setScreen('imageBackground')} />
+          <Button title="Pract: ScrollView" onPress={() => setScreen('scrollView')} />
+          <Button title="Pract: ActivityScreen" onPress={() => setScreen('activity')} />
+          <Button title="Pract: FlatListSection" onPress={() => setScreen('flatlist')} />
+          <Button title="Pract: Modal" onPress={() => setScreen('modal')} />
+          <Button title="Pract: Repaso" onPress={() => setScreen('repaso')} />
         </View>
       );
   }
@@ -90,27 +54,18 @@ export default function MenuScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex :1,
-    justifyContent:'center',
-    alignItems:'center',
-    backgroundColor:'#8e44ad'
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#8e44ad'
   },
-  text :{
+  text: {
     fontSize: 30,
     color: '#fff',
     fontFamily: 'Times New Roman',
     fontWeight: 'bold',
-    fontStyle: 'italic'
-  },
-  botonesContainer: {
-    marginTop: 28,
-    flexDirection: 'row',
-    gap: 10
-  },
-  botonesContainer2: {
-    marginTop: 40,
-    flexDirection: 'row',
-    gap: 10
+    fontStyle: 'italic',
+    marginBottom: 20
   }
 });
 
