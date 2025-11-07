@@ -4,9 +4,7 @@ const productos= [
     {nombre : "teclado", precio :700},
     {nombre : "monitor", precio :3000}
 ];
-const productos_mil= productos.filter(producto =>producto.precio>1000)
+const productos_mil= productos.filter(producto =>producto.precio>1000);
 
 const nombres_productos=productos.map(producto => producto.nombre);
 console.log(nombres_productos);
-
-
