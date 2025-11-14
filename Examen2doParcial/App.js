@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Text,
-  View,
-  StyleSheet,
-  ImageBackground,
-  ScrollView,
-  TouchableOpacity,
-} from 'react-native';
+import {Text,View,StyleSheet,ImageBackground,ScrollView,TouchableOpacity} from 'react-native';
 
 export default function App() {
   const categorias = [
