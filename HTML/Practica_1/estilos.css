@@ -1,0 +1,38 @@
+body {
+        background: blue; /*color*/
+        font-family: Georgia, 'Times New Roman', Times, serif; /* Fuente principal*/
+}
+.Formulario{
+             width: 500px;
+             margin: 40px auto;
+             background: white; 
+             padding: 25px;
+             border-radius: 10px;
+             
+}
+.form-label{
+            font-weight: 100;
+            margin-top: 12px;
+}
+.form-ingreso,.form-select,.form-textarea{
+            width: 100px;
+            padding: 10px;
+            margin-top: 10px;
+            border: 10;
+            border-radius: 5px;
+}
+.form-check{
+            margin-right: 6px;
+}
+.btn-ingresa{
+            width: 50;
+            margin-top: 18px;
+            padding: 10px;
+            border: none;
+            background: black;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            
+}
