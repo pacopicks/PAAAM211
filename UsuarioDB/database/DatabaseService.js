@@ -9,9 +9,8 @@ class DatabaseService {
 
   async initialize() {
     if (Platform.OS === 'web') {
-      console.log('Usando LocalStorage para web');
+      return;
     } else {
-      console.log('Usando SQLite para móvil');
       this.db = await SQLite.openDatabaseAsync('miapp.db');
       await this.db.execAsync(
         `CREATE TABLE IF NOT EXISTS usuarios (
@@ -53,6 +52,55 @@ class DatabaseService {
         nombre,
         fecha_creacion: new Date().toISOString()
       };
+    }
+  }
+
+  async update(id, nuevoNombre) {
+    if (Platform.OS === 'web') {
+      const usuarios = await this.getAll();
+      const usuarioIndex = usuarios.findIndex(u => u.id === id);
+      
+      if (usuarioIndex === -1) {
+        throw new Error('Usuario no encontrado');
+      }
+      
+      usuarios[usuarioIndex].nombre = nuevoNombre;
+      localStorage.setItem(this.storageKey, JSON.stringify(usuarios));
+      return usuarios[usuarioIndex];
+    } else {
+      await this.db.runAsync(
+        'UPDATE usuarios SET nombre = ? WHERE id = ?',
+        [nuevoNombre, id]
+      );
+      
+      const usuarios = await this.db.getAllAsync('SELECT * FROM usuarios WHERE id = ?', [id]);
+      return usuarios[0];
+    }
+  }
+
+  async delete(id) {
+    if (Platform.OS === 'web') {
+      const usuarios = await this.getAll();
+      const usuarioIndex = usuarios.findIndex(u => u.id === id);
+      
+      if (usuarioIndex === -1) {
+        throw new Error('Usuario no encontrado');
+      }
+      
+      usuarios.splice(usuarioIndex, 1);
+      localStorage.setItem(this.storageKey, JSON.stringify(usuarios));
+      return true;
+    } else {
+      const result = await this.db.runAsync(
+        'DELETE FROM usuarios WHERE id = ?',
+        [id]
+      );
+      
+      if (result.changes === 0) {
+        throw new Error('Usuario no encontrado');
+      }
+      
+      return true;
     }
   }
 }
